@@ -127,7 +127,7 @@ class MainActivity : Activity() {
     private fun showRemote() {
         val l = page()
         val ok = ir?.hasIrEmitter() == true
-        val title = text(l, "Hooda RHR", 22f)
+        val title = text(l, "MADevelopments RHR", 22f)
         title.gravity = Gravity.CENTER
         val st = text(l, if (ok) "Point the top edge of the phone at the hood" else "⚠ No IR blaster found", 13f)
         st.gravity = Gravity.CENTER
