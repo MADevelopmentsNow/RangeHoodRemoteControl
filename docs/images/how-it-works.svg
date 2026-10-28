@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" width="760" font-family="Roboto, Arial, sans-serif">
+<rect width="760" height="220" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+<rect x="40" y="50" width="110" height="130" rx="14" fill="#222"/><rect x="48" y="62" width="94" height="100" rx="6" fill="#121212"/>
+<circle cx="95" cy="100" r="18" fill="#E53935"/><text x="95" y="105" text-anchor="middle" font-size="10" fill="#fff">ON/OFF</text>
+<text x="95" y="205" text-anchor="middle" font-size="13" fill="#24292f">Your phone + app</text>
+<circle cx="150" cy="56" r="5" fill="#ff5252"/>
+<g stroke="#ff5252" stroke-width="3" fill="none" stroke-linecap="round"><path d="M200 60 q15 -15 30 0 t30 0 t30 0 t30 0 t30 0"/><path d="M200 80 q15 -15 30 0 t30 0 t30 0 t30 0 t30 0" opacity=".5"/></g>
+<text x="300" y="38" text-anchor="middle" font-size="13" fill="#24292f">Infrared signal (NEC, 38 kHz)</text>
+<rect x="500" y="60" width="210" height="60" rx="8" fill="#37474f"/><rect x="520" y="110" width="170" height="10" fill="#263238"/>
+<circle cx="535" cy="90" r="5" fill="#ffd54f"/><text x="605" y="95" text-anchor="middle" font-size="13" fill="#fff">Range hood</text>
+<text x="605" y="205" text-anchor="middle" font-size="13" fill="#24292f">Fan · Light · Auto · Timer</text>
+<path d="M330 150 h140" stroke="#8c959f" stroke-width="2" stroke-dasharray="5 4"/><text x="400" y="172" text-anchor="middle" font-size="12" fill="#57606a">1 button press = 1 IR frame</text>
+</svg>
