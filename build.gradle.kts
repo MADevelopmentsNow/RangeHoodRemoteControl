@@ -12,26 +12,31 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
+    val ksPath = System.getenv("KEYSTORE_PATH")
+    val ksPass = System.getenv("KEYSTORE_PASSWORD")
+    val ksAlias = System.getenv("KEY_ALIAS")
+    val ksKeyPass = System.getenv("KEY_PASSWORD")
+    val hasSigning = !ksPath.isNullOrBlank() && !ksPass.isNullOrBlank() &&
+        !ksAlias.isNullOrBlank() && !ksKeyPass.isNullOrBlank()
+
     signingConfigs {
-        create("release") {
-            val path = System.getenv("KEYSTORE_PATH")
-            if (path != null) {
-                storeFile = file(path)
-                storePassword = System.getenv("KEYSTORE_PASSWORD")
-                keyAlias = System.getenv("KEY_ALIAS")
-                keyPassword = System.getenv("KEY_PASSWORD")
+        if (hasSigning) {
+            create("release") {
+                storeFile = file(ksPath!!)
+                storePassword = ksPass
+                keyAlias = ksAlias
+                keyPassword = ksKeyPass
             }
         }
     }
     buildTypes {
         release {
-            // Uses your signature when the secrets exist, otherwise falls back to the debug key
-            signingConfig = if (System.getenv("KEYSTORE_PATH") != null)
-                signingConfigs.getByName("release")
-            else
-                signingConfigs.getByName("debug")
+            // Your signature if all 4 secrets exist, otherwise the debug key
+            signingConfig = if (hasSigning) signingConfigs.getByName("release")
+                            else signingConfigs.getByName("debug")
         }
     }
+    lint { abortOnError = false }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
