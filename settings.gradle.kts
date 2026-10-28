@@ -4,5 +4,5 @@ pluginManagement {
 dependencyResolutionManagement {
     repositories { google(); mavenCentral() }
 }
-rootProject.name = "HoodRemote"
+rootProject.name = "RangeHoodRemoteControlByMADevelopments"
 include(":app")
