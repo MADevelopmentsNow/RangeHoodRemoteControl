@@ -1,6 +1,6 @@
 # MADevelopments RoofHood Remote Control
 
-A personal Android app that replaces a dead infrared (IR) remote for a Golden MOD 3004 90 BL range hood (90 cm, black, made in Turkey). It sends IR commands from the phone's IR blaster and was built for a Poco X7 Pro.
+A personal Android app that replaces a dead infrared (IR) remote for a Golden MOD 3004 90 BL range hood (90 cm, black, made in Turkey). It sends IR commands from the phone's IR blaster.
 
 ## Features
 - Remote-style screen: ON/OFF, Light, AUTO, Fan −, Fan +, Timer
